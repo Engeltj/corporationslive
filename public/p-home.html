@@ -1,0 +1,34 @@
+
+		<div ng-repeat="i in investments" style="display: block;">
+			<div class="entry">
+				<div class="img" style="display:inline-block; vertical-align:top; width:13%">
+					<img style="width:100%" src="assets/investments/desktop.png"></img>
+				</div>
+				<div class="_container" style="display: inline-block; width:85%; margin-left:15%">
+				    <h4>{{ i.name }}
+				        <label style="float: right;">0</label>
+				    </h4>
+				    <p class="small">
+				        <b>$<span class="entry_cost">{{ i.baseprice }}</span></b> —
+				        <em class="grey">{{ i.description }}</em>
+				    </p>
+				    <p class="pull_right small">
+				        $<b>{{ i.baseprice / 20.00 }}</b> per second; <span ng-show="i.spbonus">SP Bonus +{{ i.spbonus }}</span>
+				    </p>
+				    <button class="entry_btn btn" onclick=";" disabled="disabled">Purchase</button>
+				    <button class="entry_btn btn" onclick=";" disabled="disabled">Sell</button>
+				</div>
+			</div>
+		</div>
+
+	
+
+
+
+<!-- <a href="#/login" style="display:block;">Click to go Login</a>
+ -->
+
+
+<!-- <div ng-repeat="x in message"  style="display: inline-block;">
+  <button class="btn">{{ x }}</button>
+</div> -->

@@ -1,0 +1,36 @@
+<form style="padding:20px">
+	<div class="form-group">
+		<label for="name">Investment Name</label>
+		<input class="form-control" id="name" placeholder="Computer" ng-model="newInvestment.name">
+	</div>
+	<div class="form-group">
+		<label for="desc">Description</label>
+		<input class="form-control" id="desc" placeholder="Yadad blah blah" ng-model="newInvestment.description">
+	</div>
+	<div class="form-group">
+		<label for="baseprice">Base Price</label>
+		<input class="form-control" id="baseprice" placeholder="0.00" ng-model="newInvestment.baseprice">
+	</div>
+	<div class="form-group">
+		<label for="spbonus">Share Price Bonus</label>
+		<input class="form-control" id="spbonus" placeholder="0.00" ng-model="newInvestment.spbonus">
+	</div>
+	<div class="form-group">
+		<label for="level">Level Requirement</label>
+		<input class="form-control" id="level" placeholder="5" ng-model="newInvestment.level">
+	</div>
+	<button type="submit" ng-click="createInvestment(newInvestment)" class="btn btn-default">Create</button>
+</form>
+
+
+<div ng-repeat="i in investments" style="display: block;">
+	<div class="entry">
+		<div class="_container">
+		    <p class="small">
+		        <b>{{ i.name }}</b>
+		        {{ i.description }}
+		    </p>
+		    <button class="btn btn-sm btn-danger" ng-click="deleteInvestment(i)"> DELETE </button>
+		</div>
+	</div>
+</div>

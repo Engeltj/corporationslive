@@ -1,0 +1,15 @@
+if [ "$1" == 'kill' ] 
+then
+	echo 'Killing webserver ..'
+	screen -X -S webserver kill
+	exit 0
+fi
+
+if ! screen -list | grep -q "webserver"; then
+	echo 'Starting webserver ..'
+	screen -AdmS webserver node app.js
+else
+	echo 'Already running, type' $0 'kill to quit'
+
+fi
+

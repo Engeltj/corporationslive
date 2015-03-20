@@ -1,0 +1,33 @@
+{
+  "author": "Timothy Engel",
+  "name": "CustomWebService",
+  "version": "0.0.1",
+  "description": "Custom Web Service",
+  "main": "index.js",
+  "config": {
+    "unsafe-perm": true
+  },
+  "scripts": {
+    "preinstall": "'",
+    "postinstall": "",
+    "build": "gulp"
+  },
+  "keywords": [
+    "Web",
+    "App"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "express": "4.12.2",
+    "mongojs": "0.18.2",
+    "body-parser": "~1.12",
+    "request": "2.53.0",
+    "gulp": "3.8.11",
+    "path": "0.11.14",
+    "fs": "0.0.2",
+    "url": "0.10.3"
+  },
+  "dependencies": {
+    "mongoose": "^3.8.25"
+  }
+}
