@@ -8,35 +8,55 @@
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/ngstorage/ngStorage.min.js"></script>
   <script src="js/controllers.js"></script>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="lib/bootstrap-3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body ng-controller="MainController">
 
-	<div id="bg"></div>
-	<row>
-		<div class="col-xs-12 col-s-12 col-md-4" style="padding: 0">
-			<img src="assets/logo.png" style="height: 2.5em;vertical-align:middle"></img><b style="font-size:1.5em;vertical-align:middle">Corporations Live</b>
-		</div>
-		<div class="col-xs-12 col-s-12 col-md-8"  style="padding: 0" >
-				<a class="nav_btn blue" ng-class="getState('/home')" ui-sref="home">Investments</a>
-				<a class="nav_btn blue" ng-class="getState('/world')" ui-sref="world">Worldview</a>
-				<a class="nav_btn blue" ng-class="getState('/upgrade')" ui-sref="upgrade">Upgrades</a>
-				<a class="nav_btn blue" ng-class="getState('/account')" ui-sref="account">Account</a>
-				<a class="nav_btn blue" ng-class="getState('/admin')"  ui-sref="admin">Admin</a>
-		</div>
-	</row>
-
-
-
+	<!-- <div id="bg"></div> -->
 	<div class="row">
+		<div class="col-xs-12 col-s-12 col-md-4">
+			
+			<img src="assets/logo.png" style="display:inline-block; vertical-align:middle; width:3em"></img>
+			<b style="font-size:1.5em;width:85%;display:inline-block; vertical-align:middle">Corporations Live</b>
+
+		</div>
+		<div class="col-xs-12 col-s-12 col-md-8 _nav">
+			<div class="_divider"></div>
+
+			<!-- <button type="button" style="height:3em;width:3em">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button> -->
+
+
+
+			<ul >
+				<li><a class="nav_btn blue" ng-class="getState('/home')" ui-sref="home">Investments</a></li>
+				<li><a class="nav_btn blue" ng-class="getState('/world')" ui-sref="world">Worldview</a></li>
+				<li><a class="nav_btn blue" ng-class="getState('/upgrade')" ui-sref="upgrade">Upgrades</a></li>
+				<li><a class="nav_btn blue" ng-class="getState('/account')" ui-sref="account">Account</a></li>
+				<li><a class="nav_btn blue" ng-class="getState('/admin')"  ui-sref="admin">Admin</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row" >
 		<div class="col-xs-12 col-s-12 col-md-4 stats">
-			<div class="_container">
+			
+			<div class="_container ">
 				<h3>Company Name</h3>
 				<p>Income per second (IPS): </p>
 				<p>Number of Shares: </p>
 				<p>Share Price: </p>
 			</div>
+			
 		</div>
+
+		
 		<div class="col-xs-12 col-s-12 col-md-8 main">
+			<div class="_divider"></div>
 	  		<div ui-view></div>
   		</div>
 	</div>
